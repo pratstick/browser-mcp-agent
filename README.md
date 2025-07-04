@@ -26,7 +26,6 @@ The system provides the following functionality:
 - **Runtime Environment**: Python with Asynchronous I/O (asyncio)
 - **Agent Framework**: mcp-agent library
 
-### System Requirements
 
 ### System Requirements
 
@@ -251,10 +250,6 @@ Where `{timestamp}` follows the format specified in the configuration file (`%Y%
 4. Commit changes with descriptive commit messages
 5. Submit a Pull Request with detailed description of modifications
 
-### Code Standards
-
-All contributions must adhere to established coding standards and include appropriate documentation.
-
 ## License
 
 This project is distributed under the MIT License. Please refer to the LICENSE file for complete terms and conditions.
@@ -268,35 +263,3 @@ This project is distributed under the MIT License. Please refer to the LICENSE f
 - **Puppeteer**: Browser automation library for programmatic web interaction
 - **Streamlit**: Web application framework for user interface development
 - **mcp-agent**: Agent framework for Model Context Protocol integration
-
-### Third-Party Acknowledgments
-
-The development of this system is made possible through the contributions of:
-
-- Anthropic Inc. for the Model Context Protocol specification
-- OpenAI Inc. for the GPT-4.1 Mini language model
-- Google Inc. for the Puppeteer automation framework
-- Snowflake Inc. for the Streamlit application framework
-
-## Support and Troubleshooting
-
-### Issue Resolution
-
-For technical issues and inquiries:
-
-1. **GitHub Issues**: Submit detailed issue reports through the project's GitHub repository
-2. **Log Analysis**: Examine system logs located in the `logs/` directory for diagnostic information
-3. **Dependency Verification**: Ensure all required dependencies are properly installed and configured
-4. **Credential Validation**: Verify that OpenAI API credentials are correctly configured and valid
-
-### System Requirements Verification
-
-Before reporting issues, please verify:
-- Python version compatibility (3.8+)
-- Node.js installation and accessibility
-- Network connectivity and firewall configuration
-- API key validity and permissions
-
----
-
-**Browser MCP Agent - Professional Web Automation Solution**
