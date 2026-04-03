@@ -5,7 +5,7 @@ from textwrap import dedent
 
 from mcp_agent.app import MCPApp
 from mcp_agent.agents.agent import Agent
-from mcp_agent.workflows.llm.augmented_llm_openai import OpenAIAugmentedLLM
+from mcp_agent.workflows.llm.augmented_llm_google import GoogleAugmentedLLM
 from mcp_agent.workflows.llm.augmented_llm import RequestParams
 
 st.set_page_config(page_title="Browser MCP Agent", layout="wide")
@@ -59,7 +59,7 @@ async def setup_agent():
             )
 
             await st.session_state.browser_agent.initialize()
-            st.session_state.llm = await st.session_state.browser_agent.attach_llm(OpenAIAugmentedLLM)
+            st.session_state.llm = await st.session_state.browser_agent.attach_llm(GoogleAugmentedLLM)
 
             logger = st.session_state.mcp_agent_app.logger
             tools = await st.session_state.browser_agent.list_tools()
@@ -71,7 +71,7 @@ async def setup_agent():
     return None
 
 async def run_mcp_agent(message):
-    if not os.getenv("OPENAI_API_KEY"):
+    if not os.getenv("GOOGLE_API_KEY"):
         return "Error: No API key"
     
     try:

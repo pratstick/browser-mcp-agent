@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Browser MCP Agent is an enterprise-grade web automation solution that integrates OpenAI's GPT-4.1 Mini language model with browser automation capabilities through Anthropic's Model Context Protocol (MCP) and the Puppeteer automation framework. This system provides a natural language interface for programmatic web interaction and data extraction operations.
+The Browser MCP Agent is an enterprise-grade web automation solution that integrates Google's Gemini language model with browser automation capabilities through Anthropic's Model Context Protocol (MCP) and the Puppeteer automation framework. This system provides a natural language interface for programmatic web interaction and data extraction operations.
 
 ## Core Capabilities
 
@@ -19,7 +19,7 @@ The system provides the following functionality:
 
 ### System Components
 
-- **Language Model**: OpenAI GPT-4.1 Mini (Model Version: 2025-04-14)
+- **Language Model**: Google Gemini (Model: gemini-3.1-flash-lite-preview)
 - **Browser Automation Engine**: Puppeteer via Model Context Protocol Server
 - **Communication Protocol**: Anthropic Model Context Protocol (MCP)
 - **User Interface**: Streamlit Web Application Framework
@@ -31,7 +31,7 @@ The system provides the following functionality:
 
 - Python Runtime Environment 3.8 or higher
 - Node.js Runtime Environment with npm package manager
-- Valid OpenAI API credentials
+- Valid Google API credentials (Gemini API key)
 
 ## Installation and Configuration
 
@@ -52,17 +52,17 @@ pip install -r requirements.txt
 
 ### Step 3: API Key Configuration
 
-Configure your OpenAI API credentials using one of the following methods:
+Configure your Google API credentials using one of the following methods:
 
 **Method A: Environment Variable**
 ```bash
-export OPENAI_API_KEY="your-api-key-here"
+export GOOGLE_API_KEY="your-api-key-here"
 ```
 
 **Method B: Environment File**
 Create a `.env` file in the project root directory:
 ```
-OPENAI_API_KEY=your-api-key-here
+GOOGLE_API_KEY=your-api-key-here
 ```
 
 ### Step 4: Runtime Verification
@@ -127,13 +127,13 @@ mcp:
       command: "npx"
       args: ["-y", "@modelcontextprotocol/server-puppeteer"]
 
-openai:
-  default_model: "gpt-4.1-mini-2025-04-14"
+google:
+  default_model: "gemini-3.1-flash-lite-preview"
 ```
 
 ### Configuration Parameters
 
-- **Model Configuration**: Specifies GPT-4.1 Mini as the default language model
+- **Model Configuration**: Specifies Gemini gemini-3.1-flash-lite-preview as the default language model
 - **MCP Server Configuration**: Defines Puppeteer server parameters for browser automation
 - **Logging Configuration**: Establishes debug-level logging with both console and file output
 - **Execution Engine**: Configures asyncio for asynchronous operation handling
@@ -144,7 +144,7 @@ The Browser MCP Agent implements a layered architecture as illustrated below:
 
 ```
 ┌─────────────────┐    ┌──────────────┐    ┌─────────────────┐
-│   Streamlit UI  │────│  MCP Agent   │────│   OpenAI LLM    │
+│   Streamlit UI  │────│  MCP Agent   │────│   Google LLM    │
 └─────────────────┘    └──────────────┘    └─────────────────┘
                               │
                               ▼
@@ -227,7 +227,7 @@ Where `{timestamp}` follows the format specified in the configuration file (`%Y%
 
 - **Network Dependency**: Requires stable internet connectivity for optimal operation
 - **Website Compatibility**: Certain websites may implement automated access prevention measures
-- **API Rate Limiting**: OpenAI API usage limits may affect system throughput
+- **API Rate Limiting**: Google Gemini API usage limits may affect system throughput
 - **JavaScript Compatibility**: Single Page Applications (SPAs) with heavy JavaScript may require additional processing time
 - **Security Restrictions**: CAPTCHA systems and advanced bot detection mechanisms may prevent access
 
@@ -235,7 +235,7 @@ Where `{timestamp}` follows the format specified in the configuration file (`%Y%
 
 ### Security Best Practices
 
-- **Credential Management**: OpenAI API keys must be stored securely and excluded from version control systems
+- **Credential Management**: Google API keys must be stored securely and excluded from version control systems
 - **Legal Compliance**: Users must adhere to website Terms of Service when implementing automated interactions
 - **Rate Limiting**: Production deployments should implement appropriate rate limiting mechanisms
 - **Data Handling**: All extracted web data should be reviewed and sanitized before use
@@ -259,7 +259,7 @@ This project is distributed under the MIT License. Please refer to the LICENSE f
 ### Core Dependencies
 
 - **Anthropic Model Context Protocol**: Protocol framework for standardized LLM-tool communication
-- **OpenAI GPT-4.1 Mini**: Language model for natural language processing and command interpretation
+- **Google Gemini**: Language model for natural language processing and command interpretation
 - **Puppeteer**: Browser automation library for programmatic web interaction
 - **Streamlit**: Web application framework for user interface development
 - **mcp-agent**: Agent framework for Model Context Protocol integration
