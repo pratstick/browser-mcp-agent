@@ -71,7 +71,7 @@ async def setup_agent():
     return None
 
 async def run_mcp_agent(message):
-    if not os.getenv("GOOGLE_API_KEY"):
+    if not os.getenv("GEMINI_API_KEY"):
         return "Error: No API key"
     
     try:

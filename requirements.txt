@@ -3,5 +3,4 @@ mcp-agent>=0.0.14
 google-genai>=1.0.0
 websockets>=11.0.0
 asyncio>=3.4.3
-websockets
 nest_asyncio

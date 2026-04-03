@@ -56,13 +56,13 @@ Configure your Google API credentials using one of the following methods:
 
 **Method A: Environment Variable**
 ```bash
-export GOOGLE_API_KEY="your-api-key-here"
+export GEMINI_API_KEY="your-api-key-here"
 ```
 
 **Method B: Environment File**
 Create a `.env` file in the project root directory:
 ```
-GOOGLE_API_KEY=your-api-key-here
+GEMINI_API_KEY=your-api-key-here
 ```
 
 ### Step 4: Runtime Verification
