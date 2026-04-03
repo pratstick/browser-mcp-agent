@@ -14,5 +14,5 @@ mcp:
       command: "npx"
       args: ["-y", "@modelcontextprotocol/server-puppeteer"]
 
-openai:
-  default_model: "gpt-4.1-mini-2025-04-14"
+google:
+  default_model: "gemini-3.1-flash-lite-preview"
